@@ -1,0 +1,129 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/survey.css">
+
+    <title>问卷调查</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">关于大学生日常支出的相关调查与研究</div>
+        <div class="inner">
+            <div class="question">Q1:您的性别？</div>
+            <div class="anwser">
+                <ul id="Q1">
+                    <input type="radio" name="gender" id="A1"> <label for="A1">A. 男 </label><br>
+                    <input type="radio" name="gender" id="B1"> <label for="B1">B. 女 </label><br>
+                </ul>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="question">Q2:您目前所在的年级？</div>
+            <div class="anwser">
+                <ul id="Q2">
+                    <input type="radio" name="grade" id="A2"> <label for="A2">A. 大一 </label><br>
+                    <input type="radio" name="grade" id="B2"> <label for="B2">B. 大二 </label><br>
+                    <input type="radio" name="grade" id="C2"> <label for="C2">C. 大三 </label><br>
+                    <input type="radio" name="grade" id="D2"> <label for="D2">D. 大四 </label><br>
+                </ul>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="question">Q3：您一个月的生活费大约是多少元？</div>
+            <div class="anwser" id="Q3">
+                <span>生活费：</span><input type="number" placeholder="2000" id="lp_phone_yzm" name="yzm" autocomplete="on">
+            </div>
+        </div>
+        <div class="inner">
+            <div class="question">Q4:请问您的生活费来源主要有？（多选）</div>
+            <div class="anwser">
+                <ul id="Q4">
+                    <input id="A4" type="checkbox" name="expense" value=""><label for="A4"> A. 父母提供</label>
+                    <input id="B4" type="checkbox" name="expense" value=""><label for="B4"> B. 兼职</label>
+                    <input id="C4" type="checkbox" name="expense" value=""><label for="C4"> C. 贷款</label>
+                    <input id="D4" type="checkbox" name="expense" value=""><label for="D4"> D. 奖学金</label>
+                    <input id="E4" type="checkbox" name="expense" value=""><label for="E4"> E. 其他途径</label>
+                </ul>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="question">Q5：随着人均消费水平的提升，作为消费主力军的大学生消费类型也逐渐趋于多元化。作为当代大学生的一员，请问您的主要消费类型有？（多选）</div>
+            <div class="anwser">
+                <ul id="Q5">
+                    <input id="A5" type="checkbox" name="expense" value=""><label for="A5"> A. 餐费</label>
+                    <input id="B5" type="checkbox" name="expense" value=""><label for="B5"> B. 学习</label>
+                    <input id="C5" type="checkbox" name="expense" value=""><label for="C5"> C. 日用品</label>
+                    <input id="D5" type="checkbox" name="expense" value=""><label for="D5"> D. 网购</label>
+                    <input id="E5" type="checkbox" name="expense" value=""><label for="E5"> E. 娱乐</label>
+                    <input id="F5" type="checkbox" name="expense" value=""><label for="F5"> F. 通讯</label>
+                    <input id="G5" type="checkbox" name="expense" value=""><label for="G5"> G. 其他</label>
+                </ul>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="question">Q6：您每个月在这些方面的花费大约是多少元？（填写数字，没有填0 )</div>
+            <div class="anwser" id="Q6">
+                <span>餐费：</span><input id="A6" type="number" placeholder="1000" id="lp_phone_yzm" name="yzm" autocomplete="on">
+                <span>学习：</span><input id="B6" type="number" placeholder="200" id="lp_phone_yzm" name="yzm" autocomplete="on">
+                <span>日用品：</span><input id="C6" type="number" placeholder="200" id="lp_phone_yzm" name="yzm" autocomplete="on">
+                <span>网购：</span><input id="D6" type="number" placeholder="300" id="lp_phone_yzm" name="yzm" autocomplete="on">
+                <span>娱乐：</span><input id="E6" type="number" placeholder="100" id="lp_phone_yzm" name="yzm" autocomplete="on">
+                <span>通讯：</span><input id="F6" type="number" placeholder="100" id="lp_phone_yzm" name="yzm" autocomplete="on">
+                <span>其他：</span><input id="G6" type="number" placeholder="100" id="lp_phone_yzm" name="yzm" autocomplete="on">
+            </div>
+        </div>
+        <div class="inner">
+            <div class="question">Q7：您平时是否做消费记录？</div>
+            <div class="anwser" id="Q7">
+                <ul>
+                    <input type="radio" name="note" id="A7"><label for="A7">A. 有，全部做记录 </label><br>
+                    <input type="radio" name="note" id="B7"><label for="B7">B. 有，主要部分做记录 </label><br>
+                    <input type="radio" name="note" id="C7"><label for="C7">C. 有，偶尔做记录 </label><br>
+                    <input type="radio" name="note" id="D7"><label for="D7">D. 几乎不做记录 </label><br>
+                </ul>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="question">Q8：学会理财与规划是一个合格大学生走向社会的必修课。请问拿到一个时期的生活费后您一般会有怎样的安排？</div>
+            <div class="anwser"  id="Q8">
+                <ul>
+                    <input type="radio" name="budget" id="A8"> A. 先存起一部分剩下的做生活费<br>
+                    <input type="radio" name="budget" id="B8"> B. 进行预算做好消费打算<br>
+                    <input type="radio" name="budget" id="C8"> C. 马上购买自己想要的东西<br>
+                    <input type="radio" name="budget" id="D8"> D. 没什么安排<br>
+                </ul>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="question">Q9： 您认为目前每月的生活费能否满足您的需求？</div>
+            <div class="anwser" id="Q9">
+                <ul>
+                    <input type="radio" name="satisfy" id="A9"> A. 无法满足<br>
+                    <input type="radio" name="satisfy" id="B9"> B. 勉强合适<br>
+                    <input type="radio" name="satisfy" id="C9"> C. 刚好合适<br>
+                    <input type="radio" name="satisfy" id="D9"> D. 绰绰有余<br>
+                </ul>
+            </div>
+        </div>
+        <div class="inner">
+            <div class="question">Q10： 如遇突发事件，生活费无法满足开销，您首先会采取以下哪项措施？</div>
+            <div class="anwser">
+                <ul id="Q10">
+                    <input type="radio" name="measure" id="A10"> A. 请父母资助<br>
+                    <input type="radio" name="measure" id="B10"> B. 做兼职<br>
+                    <input type="radio" name="measure" id="C10"> C. 向朋友借钱<br>
+                    <input type="radio" name="measure" id="D10"> D. 节省日常开销<br>
+                    <input type="radio" name="measure" id="E10"> E. 其他<br>
+                </ul>
+            </div>
+        </div>
+        <div class="button-wrapper">
+            <button id="submit" type="button" class="submit">提交问卷</button>
+	    </div>
+    </div>
+<script type="text/javascript" src="/static/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/static/jquery-cookie.js"></script>
+<script TYPE="text/javascript" src="/static/Chart.min.js"></script>
+<script type="text/javascript" src="/static/survey.js"></script>
+</body>
+</html>

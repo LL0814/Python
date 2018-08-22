@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/survey.css">
+    <title>结论与分析</title>
+
+</head>
+<body>
+	<div class="anwserWrapper">
+        <div class="title">调查结果与分析</div>
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q1"></canvas>
+            </div>
+        </div>
+
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q2"></canvas>
+            </div>
+        </div>
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q3"></canvas>
+            </div>
+        </div>
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q4"></canvas>
+            </div>
+        </div>
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q5"></canvas>
+            </div>
+        </div>
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q6"></canvas>
+            </div>
+        </div>
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q7"></canvas>
+            </div>
+        </div>
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q8"></canvas>
+            </div>
+        </div>
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q9"></canvas>
+            </div>
+        </div>
+        <div class="anwserItem">
+            <div class="anwserItem-anwserContainer">
+                <canvas id="Q10"></canvas>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/jquery-3.3.1.min.js"></script>
+    <script TYPE="text/javascript" src="/static/Chart.min.js"></script>
+    <script type="text/javascript" src="/static/survey.js"></script>
+    <script>
+        var ctx1 = document.getElementById('Q1').getContext('2d');
+        var chart = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ["男", "女"],
+            datasets: [
+                {
+                    label: "Q1: 性别",
+                    backgroundColor: '#2196F3',
+                    data: {{ a1 }},//[5, 7],
+                },
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+            }
+            }
+        });
+        var ctx2 = document.getElementById('Q2').getContext('2d');
+        var chart = new Chart(ctx2, {
+        type: 'line',
+       data: {
+            labels: ["大一", "大二", "大三", "大四"],
+            datasets: [{
+                label: "Q2: 年级",
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: {{ a2 }},
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+            }
+        }
+        });
+        var ctx3 = document.getElementById('Q3').getContext('2d');
+        var chart = new Chart(ctx3, {
+        type: 'bar',
+       data: {
+            labels: ["1000-", "1000-2000", "2000-3000", "3000+"],
+            datasets: [{
+                label: "Q3: 生活费支出",
+                backgroundColor: '#9c27b0',
+                borderColor: '#9c27b0',
+                data: {{ a3 }},
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+            }
+        }
+        });
+        var ctx4 = document.getElementById('Q4').getContext('2d');
+        var chart = new Chart(ctx4, {
+        type: 'radar',
+       data: {
+            labels: ["父母提供", "兼职", "贷款", "奖学金", "其他途径"],
+            datasets: [{
+                label: "Q4: 生活费来源",
+                backgroundColor: '#ff9800',
+                borderColor: '#ff9800',
+                data: {{ a4 }},
+            }]
+        },
+        options: {}
+        });
+        var ctx5 = document.getElementById('Q5').getContext('2d');
+        var chart = new Chart(ctx5, {
+        type: 'radar',
+       data: {
+            labels: ["餐费", "学习", "日用品", "网购", "娱乐", "通讯", "其他"],
+            datasets: [{
+                label: "Q5: 消费类型",
+                backgroundColor: '#8bc34a',
+                borderColor: '#8bc34a',
+                data: {{ a5 }},
+            }]
+        },
+        options: {}
+        });
+        var ctx6 = document.getElementById('Q6').getContext('2d');
+        var chart = new Chart(ctx6, {
+        type: 'polarArea',
+       data: {
+            labels: ["餐费", "学习", "日用品", "网购", "娱乐", "通讯", "其他"],
+            datasets: [
+            {
+                label: "Q6: 消费数额",
+                backgroundColor: '#cddc39',
+                borderColor: '#4caf50',
+                data: {{a6}},
+            },
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+            }
+        }
+        });
+        var ctx7 = document.getElementById('Q7').getContext('2d');
+        var chart = new Chart(ctx7, {
+        type: 'bar',
+        data: {
+            labels: ["全部", "主要", "偶尔", "从不"],
+            datasets: [
+                {
+                    label: "Q7: 消费记录",
+                    backgroundColor: '#ffeb3b',
+                    data: {{ a7 }},
+                },
+            ]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }],
+            }
+            }
+        });
+        var ctx8 = document.getElementById('Q8').getContext('2d');
+        var chart = new Chart(ctx8, {
+        type: 'line',
+       data: {
+            labels: ["预存", "预算", "买买买", "随意"],
+            datasets: [{
+                label: "Q8: 理财与规划",
+                backgroundColor: '#3f51b5',
+                borderColor: '#3f51b5',
+                data: {{ a8 }},
+            }]
+        },
+        options: {}
+        });
+        var ctx9 = document.getElementById('Q9').getContext('2d');
+        var chart = new Chart(ctx9, {
+        type: 'bar',
+       data: {
+            labels: ["无法满足", "勉强够用", "刚好合适", "绰绰有余"],
+            datasets: [{
+                label: "Q9： 生活费能否满足需求",
+                backgroundColor: '#00bcd4',
+                borderColor: '#00bcd4',
+                data: {{ a9 }},
+            }]
+        },
+        options: {}
+        });
+        var ctx10 = document.getElementById('Q10').getContext('2d');
+        var chart = new Chart(ctx10, {
+        type: 'bar',
+       data: {
+            labels: ["父母帮助", "兼职", "朋友帮助", "节省开销", "其他"],
+            datasets: [{
+                label: "Q10： 采取措施结果分析",
+                backgroundColor: '#e91e63',
+                borderColor: '#e91e63',
+                data: {{ a10 }},
+            }]
+        },
+        options: {}
+        });
+    </script>
+</body>
+</html>
